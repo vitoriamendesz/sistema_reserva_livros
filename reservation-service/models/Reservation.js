@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const reservationSchema = new mongoose.Schema({
   userId: { type: Number, required: true },
-  bookId: { type: String, required: true }, // o ID do livro vem como string (ObjectId)
+  bookId: { type: String, required: true }, 
   dataReserva: { type: Date, default: Date.now },
   status: {
     type: String,
