@@ -1,6 +1,12 @@
 # 📚 Sistema de Reserva de Livros (Microsserviços)
 
 Este projeto implementa um sistema de reserva de livros utilizando a arquitetura de **microsserviços** com comunicação via **REST**, usando **Node.js**, **Express**, e **MongoDB**.
+Vitória Gabriele 221379692
+Hudson Uccelli Matias dos Santos 220457462
+Pedro Henrique Lourenço 220145662
+Gabriel Presense 221432072
+Otávio Luque 221058002
+Lucas Roncon 220143522
 
 
 ## 🔧 Tecnologias Utilizadas
