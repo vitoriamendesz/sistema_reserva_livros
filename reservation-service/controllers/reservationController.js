@@ -6,16 +6,14 @@ const BOOK_SERVICE_URL = 'http://localhost:3001/books';
 exports.createReservation = async (req, res) => {
   const { userId, bookId } = req.body;
   try {
-    // Consulta book-service
+
     const { data: livro } = await axios.get(`${BOOK_SERVICE_URL}/${bookId}`);
     if (livro.status !== 'disponível') {
       return res.status(400).json({ error: 'Livro não está disponível para reserva.' });
     }
 
-    // Cria a reserva
     const novaReserva = await Reservation.create({ userId, bookId });
 
-    // Atualiza o status do livro
     await axios.patch(`${BOOK_SERVICE_URL}/${bookId}/status`, { status: 'reservado' });
 
     res.status(201).json(novaReserva);
